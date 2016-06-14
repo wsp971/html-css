@@ -1,15 +1,60 @@
 .public-header{
-	min-height:110px;
+	margin-top: 34px;
+	height: 134px;
 }
 .public-container{
 	position:relative;
 	margin:0 auto;
-	background:#239230;
-	background-color: red;
+	/*background-color: red;*/
 	height: 100px;
-	width:1100px;
+	width:960px;
 }
 .public-footer{
 	height:318px;
 	background: #3b2b3b;
+}
+.header-top{
+	width:960px;
+	height: 56px;
+	margin:0 auto;
+}
+.header-logo{
+	float:left;
+}
+.logo-text{
+	margin-left: 16px;
+	float:left;
+	width:324px;
+}
+.logo-text p{
+	font-size: 14px;
+	color:#666666;
+}
+.contact-info{
+	float:left;
+	margin-left:132px;
+	width:204px;
+}
+.contact_text{
+	width:140px;
+	line-height: 28px;
+	font-size:16px;
+	text-align: left;
+	float:left;
+}
+.telephone{
+	color:#005c9d;
+	font-weight: bold;
+}
+.f_l{
+	float:left;
+}
+.f_r{
+	float:right;
+}
+.c1{
+	color:#fa8100;
+}
+.c2{
+	color:#005c9d;
 }
