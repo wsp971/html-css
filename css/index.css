@@ -63,3 +63,79 @@
 	font-size: 14px;
 	line-height: 20px;
 }
+.service-menu{
+	height:269px;
+}
+.lefticon{
+	position:absolute;
+	background-image: url('../image/icons.png');
+	background-repeat: no-repeat;
+	background-position:-11px -84px;
+	top: 82px;
+	left:-85px;
+	width:32px;
+	height:45px;
+}
+.righticon{
+	position:absolute;
+	background-image: url('../image/icons.png');
+	background-repeat: no-repeat;
+	background-position:-41px -84px;
+	top: 82px;
+	left:1008px;
+	width:32px;
+	height:45px;
+}
+.service-menu ul{
+	width:1000px;
+}
+.service-menu ul li{
+	float:left;
+	/*display: inline-block;*/
+	width:210px;
+	height:252px;
+	margin-top:-25px;
+	background-color: #ffffff;
+	margin-right: 38px; 
+}
+.icons{
+	height: 164px;
+	background-color: #006eaa;
+	position: relative;
+}
+.icon_1{
+	position:absolute;
+	background-image: url("../image/icons.png");
+	background-position: 0px 0px; 
+	width:60px;
+	height:60px;
+	top: 56px;
+	left:70px;
+}
+.icon_2{
+	position:absolute;
+	background-image: url("../image/icons.png");
+	background-position: -68px 0px; 
+	width:60px;
+	height:60px;
+	top: 56px;
+	left:70px;
+}
+.icon_3{
+	position:absolute;
+	background-image: url("../image/icons.png");
+	background-position: -140px 0px; 
+	width:60px;
+	height:60px;
+	top: 56px;
+	left:70px;
+}
+.icon_4{
+	position:absolute;
+	background-image: url("../image/icons.png");
+	background-position: -210px 0px; 
+	width:60px;
+	height:60px;
+	top: 56px;
+	left:70px;
+}

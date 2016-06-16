@@ -103,9 +103,34 @@
 .c8{
 	color:#888888;
 }
+.c9{
+	color:#333333;
+}
+.c10{
+	color:#999999;
+}
+
 .bg1{
 	background-color: #f3f3f3;	
 }
+.bg2{
+	background-color: #f6f6f6;
+}
 .m_t39{
 	margin-top: 39px;
+}
+.align_c{
+	text-align: center;
+}
+.valign_m{
+	vertical-align: middle;
+}
+.f_20{
+	font-size: 20px;
+}
+.f_12{
+	font-size: 12px;
+}
+.p_t26{
+	padding-top: 26px;
 }
