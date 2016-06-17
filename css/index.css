@@ -75,6 +75,8 @@
 	left:-85px;
 	width:32px;
 	height:45px;
+	cursor :pointer;
+
 }
 .righticon{
 	position:absolute;
@@ -85,6 +87,7 @@
 	left:1008px;
 	width:32px;
 	height:45px;
+	cursor :pointer;
 }
 .service-menu ul{
 	width:1000px;
@@ -138,4 +141,79 @@
 	height:60px;
 	top: 56px;
 	left:70px;
+}
+.index_introduction{
+	height: 293px;
+	background-color: #ffffff;
+}
+p.title{
+	font-size: 24px;
+	line-height: 24px;
+	margin-top:49px;
+	
+}
+.introduction{
+	font-size: 14px;
+	line-height: 24px;
+	color: #666666;
+	margin-top:36px;
+}
+.index_introduction{
+	height:367px; 
+}
+.index_introduction ul{
+	width:993px;
+	margin-top:20px;
+}
+.index_introduction ul li{
+	float:left;
+	width:300px;
+	height: 117px;
+	margin-right:26px;
+	border:1px solid #e8e8e8;
+
+}
+.title3{
+	height: 59px;
+	background-color: #006eaa;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 24px;
+	padding-left: 21px;
+
+}
+.title4{
+	width:260px;
+	height: 60px;
+	padding: 14px 21px;
+	height:45px;
+	color:#999999;
+	font-size: 12px;
+	line-height: 22px;
+}
+.bg3{
+	background-image: url("../image/bg2.png");
+	height:24px;
+	width:533px;
+}
+.service_cycle{
+	height: 103px;
+	background-color: #006eaa;
+	width:100%;
+}
+#sevice_code{
+	/*font-size: 20px;
+	color: #ffffff;*/
+	float: left;
+	margin-left: 104px;
+/*	height: 103px;
+	line-height: 103px;*/
+	vertical-align: middle;
+}
+#sevice_code div{
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 24px;
+
+
 }

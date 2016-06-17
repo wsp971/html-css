@@ -109,6 +109,9 @@
 .c10{
 	color:#999999;
 }
+.c11{
+	color:#006eaa;
+}
 
 .bg1{
 	background-color: #f3f3f3;	
@@ -118,6 +121,12 @@
 }
 .m_t39{
 	margin-top: 39px;
+}
+.m_l10{
+	margin-left: 10px;
+}
+.m_l104{
+	margin-left: 104px;
 }
 .align_c{
 	text-align: center;
@@ -133,4 +142,7 @@
 }
 .p_t26{
 	padding-top: 26px;
+}
+.fw_b{
+	font-weight: bold;
 }
