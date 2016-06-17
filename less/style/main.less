@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@test-width:300px;
+
+.box{
+	width:@test-width;
+	height: @test-width;
+}
+
+.box2{
+	.box;
+	color:red;
+	background-color: #green;
+}
+.border_01(@border_width:5px){
+	border:solid blue @border_width;
+}
+
+.box3{
+	.border_01();
+}
