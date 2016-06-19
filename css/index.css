@@ -205,15 +205,35 @@ p.title{
 	/*font-size: 20px;
 	color: #ffffff;*/
 	float: left;
-	margin-left: 104px;
-/*	height: 103px;
-	line-height: 103px;*/
-	vertical-align: middle;
+	/*margin-left: 104px;*/
+	
+	/*vertical-align: middle;*/
 }
 #sevice_code div{
 	font-size: 20px;
 	color: #ffffff;
 	line-height: 24px;
-
-
+	width: 335px;
+	height: 103px;
+	line-height: 103px;
+}
+.service_content{
+	width:190px;
+	float: left;
+}
+.service_content>span:nth-child(1){
+	font-size: 45px;
+	font-weight: lighter;
+	line-height: 55.8px;
+	color: #ffb31f;
+}
+.service_content>span:nth-child(2){
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+}
+.service_content>span:nth-child(4){
+	font-size: 18.06px;
+	color: #ffffff;
+	line-height: 36.11px;
 }
