@@ -18,4 +18,120 @@
 
 .box3{
 	.border_01();
+	width: @test-width;
+	height: @test-width;
+}
+.sanjiao{
+	width:0;
+	height: 0;
+	overflow: hidden;
+	border-width: 20px;
+	border-color:  transparent transparent red transparent;
+	//兼容 ie6写法，透明边要写上dashed
+	border-style: dashed dashed solid dashed;
+}
+
+//朝上三角
+.trangle(top,@w:5px,@c:red){
+	border-width: @w;
+	border-color: transparent transparent @c transparent;
+	border-style: dashed dashed solid dashed;
+}
+//朝下三角
+.trangle(bottom,@w:5px,@c:red){
+	border-width: @w;
+	border-color: @c  transparent transparent transparent;
+	border-style: solid dashed dashed  dashed;
+}
+//朝左三角
+.trangle(left,@w:5px,@c:red){
+	border-width: @w;
+	border-color: transparent transparent  transparent @c;
+	border-style: dashed dashed  dashed solid;
+}
+//朝右三角
+.trangle(right,@w:5px,@c:red){
+	border-width: @w;
+	border-color: transparent @c transparent transparent;
+	border-style: dashed solid dashed  dashed;
+}
+//这部分是每个trangle 的公共部分，公共部分用@_声明第一个匹配值
+.trangle(@_,@w:5px,@c:red){
+	width: 0;
+	height: 0;
+	overflow: hidden;	
+}
+
+//10px 颜色为#ccc的向上三角
+.sanjiao1{
+	.trangle(bottom,10px,#ccc);
+}
+//5px,颜色为红色的向左三角
+.sanjiao2{
+	.trangle(left);
+}
+.pos(r){
+	position: relative;
+}
+.pos(a){
+	position: absolute;
+}
+.pos(f){
+	position: fixed;
+}
+.dingwei{
+	.pos(r);
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+}
+
+//声明变量
+@test-len:200px;
+//box3
+.box3{
+	width:@test-len - 20;
+	height: @test-len + 30px;
+	background-color: #ccc-10;
+}
+
+.list{
+	width: 600px;
+	margin:30px auto;
+	padding: 0;
+	list-style: none;
+	//嵌套定义
+	li{
+		height: 30px;
+		line-height: 30px;
+		background-color: pink;
+		margin-bottom: 5px;
+	}
+	a{
+		float:left;
+		//& 代表上一层选择器
+		&:hover{
+			color:red;
+		}
+	}
+	span{
+		float:right;
+	}
+}
+
+
+.border-arg(@w:30px,@c:#ccc,@xx:solid){
+	//用arguments代替写各个参数
+	border:@arguments;
+}
+.border-test{
+	.border-arg();
+	width:300px;
+	height:300px;
+}
+
+//避免编译
+
+.test_03{
+	width:~'calc(300px-30px)';
 }
