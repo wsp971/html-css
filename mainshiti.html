@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+    html,body,ul{
+        
+        margin: 0;
+        padding: 0;
+
+    }
+    .container {
+        margin: 0 auto;
+        width:600px;
+        min-height: 300px;
+        background-color: #ddd;
+        overflow: hidden;
+
+    }
+    .loop{
+        margin: 0 auto;
+        width:500px;
+        overflow:hidden;
+    }
+    .loop1{
+        margin: 0 auto;
+        width:500px;
+        overflow:hidden;
+        position: relative;
+        min-height: 300px;
+    }
+
+    .p_a{
+        position: absolute;
+        top:0px;
+        left:0px;
+    }
+
+    .container ul{
+       
+        width:1500px;
+        height:300px;
+        background-color: #ccc;
+        margin: 0 auto;
+        /*overflow: hidden;*/
+
+    }
+
+    .container ul>li{
+        float: left;
+        display: block;
+    }
+    .container1{
+        margin: 0 auto;
+        width:600px;
+        min-height: 300px;
+        background-color: #ddd;
+        overflow: hidden;
+        position:relative;
+    }
+    .block{
+        width:30px;
+        min-height:30px;
+        background-color: red;
+        position:absolute;
+        top:0;
+        left:0;
+
+    }
+    .container2{
+        width:300px;
+        overflow:scroll;
+        background-color: #ccc;
+    }
+    .scroll{
+        width:500px;
+        min-height: 200px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="loop">
+            <ul >
+                <li>
+                    <img src="./style/image/1.png" alt="">
+                </li>
+                <li>  
+                    <img src="./style/image/2.png" alt="">
+                </li>
+                <li>  
+                    <img src="./style/image/3.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="loop1">
+            <ul class="p_a">
+                <li><img src="./style/image/1.png" alt=""></li>
+                <li><img src="./style/image/2.png" alt=""></li>
+                <li><img src="./style/image/3.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="block">
+        </div>
+     </div>
+     <div class="container2">
+         <div class="scroll">
+             <p>sdffffffffffffffffffffksajfjdsafksdjfksdjfsajdfkdsjflkdsajfsjdf;kjjkjljkljkjlkjlkj;jjlkjklj;j;j</p>
+         </div>
+     </div>
+    <script>
+        var ul=document.getElementsByTagName("ul")[0];
+        var fistChild=ul.firstElementChild;
+
+        function change(){
+            var ul=document.getElementsByTagName("ul")[0];
+            firstChild=ul.firstElementChild;
+            ul.appendChild(firstChild);
+        }
+        // var interval=setInterval(change,1000);
+       
+        function fun(n,o){
+            console.log(o);
+            return {
+                fun:function(m){
+                    return fun(m,n);
+                }
+            }
+        }
+        var a=fun(0); a.fun(1);a.fun(2);a.fun(3);
+        var b=fun(0).fun(1).fun(2).fun(3);
+        var c=fun(0).fun(1);c.fun(2);c.fun(3);
+
+        moveAnimate(ul);
+
+       function moveAnimate(element){
+            setInterval(function(){
+                moveleft(element,500,500);
+                element.appendChild(element.firstElementChild);
+                element.style.marginLeft="0px";
+            },3000);
+       }
+        function moveleft(element,length,time){
+            var pie=length*100/time;
+            var timer=setInterval(function(){
+               if(length>0&&length>=pie){
+                   move(element,pie);
+                   length-=pie;
+               }else{
+                   move(element,length);
+                 clearInterval(timer);
+               }
+            },100);
+            function move(element,margin){
+                var marginLeft=element.style.marginLeft.slice(0,-2);
+                element.style.marginLeft=(Number(marginLeft)-margin)+"px";
+            }
+        }
+        function PositionmoveLeft(element,length,time){
+            var preTime=100;
+            var pie=length*preTime/time;
+            var timer=setInterval(function(){
+                if(length>0&&length>pie){
+                    positionMove(element,pie);
+                    length-=pie;
+                }else{
+                    positionMove(element,length);
+                    clearInterval(timer);
+                }
+
+            },preTime);
+            function positionMove(element,left){
+                var nowleft=element.style.left.slice(0,-2);
+                element.style.left=(Number(nowleft)-left)+"px";
+            }
+        }
+        var ul1=document.getElementsByTagName("ul")[1];
+        function moveAnimate2(element){
+            setInterval(function(){
+                PositionmoveLeft(element,500,500);
+                element.appendChild(element.firstElementChild);
+                element.style.left="0px";
+            },2000);
+        }
+        moveAnimate2(ul1);
+
+
+    </script>
+
+
+    <script>
+            function A(){
+                var startTime=new Date().getTime();
+                console.LOG(startTime);
+                for(var i=0;i<100000000;i++){}
+                var endTime=new Date.getTime();
+                console.log(endTime);
+                console.log(endTime-startTime);
+            }
+        setInterval(a,1000);
+
+    </script>
+</body>
+</html>

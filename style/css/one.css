@@ -1,0 +1,30 @@
+@charset "utf-8";
+html,
+body {
+  width: 100%;
+}
+body,
+ul,
+ol {
+  margin: 0;
+}
+.main {
+  width: 1000px;
+  background-color: #fff;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  min-height: 40px;
+  background-color: #ddd;
+}
+.footer {
+  position: fixed;
+  width: 100%;
+  min-height: 40px;
+  background-color: #aaa;
+}
+.test {
+  min-height: 1000px;
+  background-color: red;
+}
